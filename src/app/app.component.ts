@@ -14,6 +14,8 @@ import { ButtonMenuComponent } from './components/button-menu/button-menu.compon
 import { TimeCityComponent } from './components/time-city/time-city.component';
 import { ComposantEnfantComponent } from './components/composant-enfant/composant-enfant.component';
 import { ComposantParentComponent } from './components/composant-parent/composant-parent.component';
+import { ExoEnfantComponent } from './components/exo-enfant/exo-enfant.component';
+import { ExoParentComponent } from './components/exo-parent/exo-parent.component';
 
 @Component({
   selector: 'app-root',
@@ -34,6 +36,8 @@ import { ComposantParentComponent } from './components/composant-parent/composan
     TimeCityComponent,
     ComposantEnfantComponent,
     ComposantParentComponent,
+    ExoEnfantComponent,
+    ExoParentComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
