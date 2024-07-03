@@ -9,6 +9,11 @@ import { ListeFiltreComponent } from './components/liste-filtre/liste-filtre.com
 import { ShowDateComponent } from './components/show-date/show-date.component';
 import { CommonModule } from '@angular/common';
 import { UserCardComponent } from './components/user-card/user-card.component';
+import { GenericAlertButtonComponent } from './components/generic-alert-button/generic-alert-button.component';
+import { ButtonMenuComponent } from './components/button-menu/button-menu.component';
+import { TimeCityComponent } from './components/time-city/time-city.component';
+import { ComposantEnfantComponent } from './components/composant-enfant/composant-enfant.component';
+import { ComposantParentComponent } from './components/composant-parent/composant-parent.component';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +29,11 @@ import { UserCardComponent } from './components/user-card/user-card.component';
     ShowDateComponent,
     CommonModule,
     UserCardComponent,
+    GenericAlertButtonComponent,
+    ButtonMenuComponent,
+    TimeCityComponent,
+    ComposantEnfantComponent,
+    ComposantParentComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

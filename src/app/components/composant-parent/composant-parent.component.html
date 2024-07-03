@@ -1,0 +1,7 @@
+@if (visible) {
+<p>je suis visible</p>
+}@else {
+<p>je ne suis plus visible</p>
+}
+
+<app-composant-enfant [visible]="visible" (changeValue)="changeValue($event)"></app-composant-enfant>

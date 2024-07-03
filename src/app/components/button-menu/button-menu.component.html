@@ -1,0 +1,7 @@
+<p>button-menu works!</p>
+
+@for (item of buttons; track $index) {
+
+<app-generic-alert-button [alertMessage]="item.alertMessage"
+  [buttonTitle]="item.buttonTitle"></app-generic-alert-button>
+}
