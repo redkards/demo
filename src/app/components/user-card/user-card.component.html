@@ -1,0 +1,26 @@
+<p>user-card works!</p>
+
+@for (user of users; track $index; let isOdd = $odd) {
+
+@if (!isOdd) {
+
+
+
+
+
+<div>
+  <p>{{$index}} - {{user.id}} </p>
+
+  <p>{{user.id}} </p>
+
+  <p>{{user.name}} </p>
+
+  <p>{{user.username}} </p>
+
+  <p>{{user.email}} </p>
+
+  <p>{{user.company.name}} </p>
+
+</div>
+}
+}

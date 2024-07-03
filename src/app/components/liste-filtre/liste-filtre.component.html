@@ -1,0 +1,8 @@
+<h2>liste filtre works!</h2>
+
+@for (item of items; track $index)
+{
+@if (item.includes('a')) {
+<p>{{item}} </p>
+}
+}
