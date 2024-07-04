@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { FirstComponentComponent } from './components/first-component/first-component.component';
 import { ListeComponent } from './components/liste/liste.component';
 import { UserComponent } from './components/user/user.component';
 import { AlertButtonComponent } from './components/alert-button/alert-button.component';
@@ -17,13 +16,13 @@ import { ComposantParentComponent } from './components/composant-parent/composan
 import { ExoEnfantComponent } from './components/exo-enfant/exo-enfant.component';
 import { ExoParentComponent } from './components/exo-parent/exo-parent.component';
 import { ListeCourseComponent } from './components/liste-course/liste-course.component';
+import { ReactiveFormModuleComponent } from './components/reactive-form-module/reactive-form-module.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet,
-    FirstComponentComponent,
     ListeComponent,
     UserComponent,
     AlertButtonComponent,
@@ -40,6 +39,7 @@ import { ListeCourseComponent } from './components/liste-course/liste-course.com
     ExoEnfantComponent,
     ExoParentComponent,
     ListeCourseComponent,
+    ReactiveFormModuleComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

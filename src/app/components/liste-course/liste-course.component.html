@@ -5,3 +5,13 @@
   <input type="text" name="nouvelArticle" [(ngModel)]="newArticle">
   <button type="submit">Ajouter article</button>
 </form>
+<ul>
+  @for (item of articles; track $index) {
+
+  <li>{{item}}</li>
+
+  }@empty {
+  <p>aucun article</p>
+
+  }
+</ul>

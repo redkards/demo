@@ -1,0 +1,30 @@
+<h2>reactive-form-module works!</h2>
+
+<form [formGroup]="article" (ngSubmit)="addArticle()">
+
+  <label for="">
+    designation:
+    <input type="text" formControlName="designation">
+    @if (designation.invalid && designation.dirty) {
+
+    <span>designation requis </span>
+    }
+    <br>
+  </label>
+  <label for="">
+    prix:
+    <input type="number" formControlName="prix">
+
+  </label>
+
+  <button [disabled]="article.invalid" type="submit">ajouter</button>
+
+</form>
+
+@for (item of articles; track $index) {
+
+<p>{{item.designation}} - {{item.prix}}</p>
+
+}
+
+<p>total = {{totalPrice}} </p>
