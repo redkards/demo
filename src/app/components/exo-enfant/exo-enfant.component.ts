@@ -11,13 +11,13 @@ import { FormsModule } from '@angular/forms';
 })
 export class ExoEnfantComponent {
   @Input()
-  visible!: boolean;
+  vue!: boolean;
 
   @Output()
   changeValue: EventEmitter<boolean> = new EventEmitter();
 
   onClick() {
-    this.visible = !this.visible;
-    this.changeValue.emit(this.visible); // Emit l'événement changeValue avec la nouvelle valeur de visible
+    this.vue = !this.vue;
+    this.changeValue.emit(this.vue); // Emit l'événement changeValue avec la nouvelle valeur de visible
   }
 }

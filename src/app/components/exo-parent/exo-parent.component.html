@@ -2,8 +2,9 @@
   <input type="text" name="joblabel" [(ngModel)]="show">
 </form>
 <br>
-<p>{{show}}</p>
-<thead>
+<p>{{ show }}</p>
+
+<thead class="tableH">
   <tr>
     <th scope="col">id</th>
     <th scope="col">nom</th>
@@ -11,23 +12,27 @@
     <th scope="col">age</th>
   </tr>
 </thead>
+
 @for (item of users; track $index) {
 
 @if (item.isVisible) {
-<table class="table table-dark table-striped">
+<table class="table">
   <tbody>
     <tr>
       <th scope="row">{{item.id}}</th>
       <td>{{item.nom}}</td>
       <td>{{item.prenom}}</td>
       <td>{{item.age}}</td>
-      <td><button (click)="onClick(item)">delete</button></td>
+      <app-exo-enfant [vue]="visible" (changeValue)="changeValue($event)"></app-exo-enfant>
+      <!-- <td><button (click)="onClick(item)">delete</button></td> -->
     </tr>
 
   </tbody>
 </table>
 
 }
+
+<!-- <app-exo-enfant [visible]="visible" (changeValue)="changeValue($event)"></app-exo-enfant> -->
 
 
 

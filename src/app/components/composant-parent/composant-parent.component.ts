@@ -9,9 +9,9 @@ import { ComposantEnfantComponent } from '../composant-enfant/composant-enfant.c
   styleUrl: './composant-parent.component.css',
 })
 export class ComposantParentComponent {
-  visible: boolean = true;
+  vue: boolean = true;
 
   changeValue(event: boolean) {
-    this.visible = event;
+    this.vue = event;
   }
 }

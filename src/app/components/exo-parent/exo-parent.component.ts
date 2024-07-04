@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Pipe } from '@angular/core';
 import { ExoEnfantComponent } from '../exo-enfant/exo-enfant.component';
 import { CommonModule } from '@angular/common';
 import { User } from '../../models/user.model';
@@ -23,14 +23,15 @@ export class ExoParentComponent {
     { id: 8, nom: 'johnson', prenom: 'emily', age: 21, isVisible: true },
     { id: 9, nom: 'martin', prenom: 'luther', age: 40, isVisible: true },
   ];
-  onClick(user: User) {
-    console.log(user);
-    user.isVisible = false;
-    console.log(user);
+  // onClick(userView: User) {
+  //   console.log(userView);
+  //   userView.isVisible = false;
+  //   console.log(userView);
+  // }
+  visible: boolean = true;
+
+  changeValue(event: boolean) {
+    this.visible = event;
   }
-  show: string = '';
-  takeIt = function select(user: User) {
-    this.takeIt = user.nom;
-    console.log(this.takeIt);
-  };
+  show!: string;
 }
