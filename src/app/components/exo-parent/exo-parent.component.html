@@ -1,8 +1,8 @@
 <form action="">
-  <input type="text" name="joblabel" [(ngModel)]="show">
+  <input type="text" name="joblabel" [(ngModel)]="showText">
 </form>
 <br>
-<p>{{ show }}</p>
+<p>{{ showText }}</p>
 
 <thead class="tableH">
   <tr>
@@ -23,7 +23,7 @@
       <td>{{item.nom}}</td>
       <td>{{item.prenom}}</td>
       <td>{{item.age}}</td>
-      <app-exo-enfant [vue]="visible" (changeValue)="changeValue($event)"></app-exo-enfant>
+      <td><app-exo-enfant [vue]="visible" (changeValue)="changeValue($event)"></app-exo-enfant></td>
       <!-- <td><button (click)="onClick(item)">delete</button></td> -->
     </tr>
 

@@ -33,5 +33,5 @@ export class ExoParentComponent {
   changeValue(event: boolean) {
     this.visible = event;
   }
-  show!: string;
+  showText!: string;
 }

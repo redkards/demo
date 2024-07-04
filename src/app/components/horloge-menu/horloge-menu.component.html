@@ -1,0 +1,4 @@
+@for (fuseau of fuseaux; track $index) {
+    <app-horloge [time]="setTime(fuseau)"></app-horloge>
+    <span>{{fuseau.split("/")[1]}}</span>
+}
