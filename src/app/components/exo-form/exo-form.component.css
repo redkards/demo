@@ -1,0 +1,8 @@
+.formView {
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background-color: aqua;
+  color: red;
+}

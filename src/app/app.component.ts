@@ -17,6 +17,7 @@ import { ExoEnfantComponent } from './components/exo-enfant/exo-enfant.component
 import { ExoParentComponent } from './components/exo-parent/exo-parent.component';
 import { ListeCourseComponent } from './components/liste-course/liste-course.component';
 import { ReactiveFormModuleComponent } from './components/reactive-form-module/reactive-form-module.component';
+import { ExoFormComponent } from './components/exo-form/exo-form.component';
 
 @Component({
   selector: 'app-root',
@@ -40,6 +41,7 @@ import { ReactiveFormModuleComponent } from './components/reactive-form-module/r
     ExoParentComponent,
     ListeCourseComponent,
     ReactiveFormModuleComponent,
+    ExoFormComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

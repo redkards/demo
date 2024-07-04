@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {
-  FormControl,
+  FormBuilder,
   FormGroup,
   ReactiveFormsModule,
   Validators,
@@ -14,27 +14,42 @@ import {
   styleUrl: './reactive-form-module.component.css',
 })
 export class ReactiveFormModuleComponent {
-  article!: FormGroup;
+  article: FormGroup = this.formBuilder.group({
+    designation: [
+      '',
+      [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.pattern(/^[a-zA-Z]+$/),
+      ],
+    ],
+    prix: ['', [Validators.required, Validators.min(0)]],
+  });
 
   articles: any[] = [];
 
-  constructor() {
-    this.article = new FormGroup({
-      designation: new FormControl('', [
-        Validators.required,
-        Validators.min(2),
-      ]),
-      prix: new FormControl(0, Validators.required),
-    });
-  }
+  submitted: boolean = false;
 
-  addArticle() {
+  constructor(private formBuilder: FormBuilder) {}
+
+  private addArticle() {
     this.articles.push(this.article.value);
-    this.article.reset();
+    // this.article.reset();
+    this.submitted = false;
   }
 
-  get designation() {
-    return this.article.controls['designation'];
+  onSubmit(): boolean {
+    this.submitted = true;
+    if (this.article.invalid) {
+      return false;
+    } else {
+      this.addArticle();
+      return true;
+    }
+  }
+
+  get form() {
+    return this.article.controls;
   }
 
   get totalPrice(): number {

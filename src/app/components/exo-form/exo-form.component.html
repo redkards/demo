@@ -1,0 +1,94 @@
+<p>exo-form works!</p>
+@for (item of userType; track $index) {
+<div class="card" style="width: 18rem;">
+  <img src="https://picsum.photos/200/200" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{item.nom}} {{item.prenom}}</h5>
+    <p class="card-text"> description du User</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">email : {{item.email}}</li>
+    <li class="list-group-item">entreprise : {{item.entreprise}}</li>
+    <li class="list-group-item">tel : {{item.telephone}}</li>
+  </ul>
+
+</div>
+}
+
+
+@for (item of userData; track $index) {
+
+<div class="card" style="width: 18rem;">
+  <img src="https://picsum.photos/200/200" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{item.nom}} {{item.prenom}}</h5>
+    <p class="card-text"> description du User</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">email : {{item.email}}</li>
+    <li class="list-group-item">entreprise : {{item.entreprise}}</li>
+    <li class="list-group-item">tel : {{item.telephone}}</li>
+  </ul>
+
+</div>
+
+}
+
+<form [formGroup]="user" (ngSubmit)="onSubmit()">
+  <div class="formView">
+    <label for="nom">
+      nom:
+    </label>
+    <input type="text" formControlName="nom" required>
+    @if (submitted && nom['nom'].invalid ) {
+    <span>Nom requis</span>
+    }@else if (nom['nom'].hasError('minlength')) {
+    <span><strong> le nom doit contenir au moins 2 caractères </strong></span>
+    }
+
+    <label for="prenom">
+      prenom:
+    </label>
+    <input type="text" formControlName="prenom" required>
+    @if (submitted && prenom['prenom'].invalid ) {
+    <span>Prénom requis</span>
+    }@else if (prenom['prenom'].hasError('minlength')) {
+    <span><strong> le prenom doit contenir au moins 2 caractères </strong></span>
+    }
+
+    <label for="email">
+      email:
+    </label>
+    <input type="email" formControlName="email" required>
+    @if (submitted && email['email'].invalid ) {
+    <span>Format email invalide</span>
+    }@else if (email['email'].hasError('email')) {
+    <span><strong> le format email n'est pas valide</strong></span>
+    }
+
+    <label for="entreprise">
+      entreprise:
+    </label>
+    <input type="text" formControlName="entreprise" required>
+    @if (submitted && entreprise['entreprise'].invalid ) {
+    <span>Format entreprise invalide</span>
+    }@else if (entreprise['entreprise'].hasError('minlength')) {
+    <span><strong> le nom de l'entreprise doit contenir au moins 5 caractères </strong></span>
+    }
+
+    <label for="telephone">
+      telephone:
+    </label>
+    <input type="text" formControlName="telephone" required>
+    @if (submitted && telephone['telephone'].invalid ) {
+    <span>Format telephone invalide</span>
+    }@else if (telephone['telephone'].hasError('minlength')) {
+    <span><strong> le telephone doit contenir au moins 10 chiffres </strong></span>
+    }
+
+    <button type="submit" [disabled]="user.invalid">Envoyer</button>
+
+    <br>
+
+  </div>
+</form>

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TableUsersComponent } from './table-users.component';
+import { ExoFormComponent } from './exo-form.component';
 
-describe('TableUsersComponent', () => {
-  let component: TableUsersComponent;
-  let fixture: ComponentFixture<TableUsersComponent>;
+describe('ExoFormComponent', () => {
+  let component: ExoFormComponent;
+  let fixture: ComponentFixture<ExoFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TableUsersComponent]
+      imports: [ExoFormComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TableUsersComponent);
+    fixture = TestBed.createComponent(ExoFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
