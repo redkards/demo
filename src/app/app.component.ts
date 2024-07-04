@@ -16,6 +16,7 @@ import { ComposantEnfantComponent } from './components/composant-enfant/composan
 import { ComposantParentComponent } from './components/composant-parent/composant-parent.component';
 import { ExoEnfantComponent } from './components/exo-enfant/exo-enfant.component';
 import { ExoParentComponent } from './components/exo-parent/exo-parent.component';
+import { ListeCourseComponent } from './components/liste-course/liste-course.component';
 
 @Component({
   selector: 'app-root',
@@ -38,6 +39,7 @@ import { ExoParentComponent } from './components/exo-parent/exo-parent.component
     ComposantParentComponent,
     ExoEnfantComponent,
     ExoParentComponent,
+    ListeCourseComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
