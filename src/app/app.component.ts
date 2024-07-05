@@ -22,6 +22,9 @@ import { TableUsersComponent } from './components/table-user/table-users.compone
 import { FormSearchComponent } from './components/form-search/form-search.component';
 import { ExoInputVendrediComponent } from './components/exo-input-vendredi/exo-input-vendredi.component';
 import { ButtonDeleteComponent } from './components/button-delete/button-delete.component';
+import { ExoformUsercardParentComponent } from './components/exoform-usercard-parent/exoform-usercard-parent.component';
+import { ExoformUsercardEnfant1Component } from './components/exoform-usercard-enfant1/exoform-usercard-enfant1.component';
+import { ExoformUsercardEnfant2Component } from './components/exoform-usercard-enfant2/exoform-usercard-enfant2.component';
 
 @Component({
   selector: 'app-root',
@@ -50,6 +53,9 @@ import { ButtonDeleteComponent } from './components/button-delete/button-delete.
     FormSearchComponent,
     ExoInputVendrediComponent,
     ButtonDeleteComponent,
+    ExoformUsercardParentComponent,
+    ExoformUsercardEnfant1Component,
+    ExoformUsercardEnfant2Component,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -61,13 +67,16 @@ export class AppComponent {
 
   test: boolean = false;
 
-  changeValue(event: string) {
-    this.hello = 'changement';
-    console.log(this.test);
-    this.test = !this.test;
-  }
+  // changeValue(event: string) {
+  //   this.hello = 'changement';
+  //   console.log(this.test);
+  // }
 
-  changeTest(event: boolean) {
-    this.test = !this.test;
+  changeTest(clickEvent: boolean) {
+    if (clickEvent) {
+      this.hello = 'salut';
+    } else {
+      this.hello = 'bonjour';
+    }
   }
 }

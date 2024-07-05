@@ -28,7 +28,8 @@ export class ExoInputVendrediComponent {
   changeTest: EventEmitter<boolean> = new EventEmitter();
 
   onClick() {
-    this.changeValue.emit(this.titre); // Emit l'événement changeValue avec la nouvelle valeur de test
+    // this.changeValue.emit(this.titre); // Emit l'événement changeValue avec la nouvelle valeur de test
+    this.testEnfant = !this.testEnfant;
     this.changeTest.emit(this.testEnfant); // Emit l'événement changeValue avec la nouvelle valeur de test
   }
 }

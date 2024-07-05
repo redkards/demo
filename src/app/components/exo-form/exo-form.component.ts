@@ -29,20 +29,14 @@ export class ExoFormComponent {
     prenom: ['', [Validators.required, Validators.minLength(2)]],
     email: ['', [Validators.required, Validators.email]],
     entreprise: ['', [Validators.required, Validators.minLength(5)]],
-    // telephone: [
-    //   '',
-    //   [
-    //     Validators.required,
-    //     Validators.pattern(/^[0-9]+$/),
-    //     Validators.minLength(10),
-    //   ],
-    // ],
-    telephone: this.formBuilder.array([
-      this.formBuilder.control('', [
-        Validators.minLength(10),
+    telephone: [
+      '',
+      [
         Validators.required,
-      ]),
-    ]),
+        Validators.pattern(/^[0-9]+$/),
+        Validators.minLength(10),
+      ],
+    ],
   });
 
   userData: any[] = [];
