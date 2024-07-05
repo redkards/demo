@@ -1,0 +1,7 @@
+<form>
+    <!-- est un écouteur d'événement dans Angular utilisé pour 
+     réagir aux changements de valeur. -->
+    <input type="text" class="form-control" name="search" 
+    [placeholder]="placeholder" 
+    [(ngModel)]="search" (ngModelChange)="up()"/>
+</form>

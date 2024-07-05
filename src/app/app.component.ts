@@ -18,6 +18,10 @@ import { ExoParentComponent } from './components/exo-parent/exo-parent.component
 import { ListeCourseComponent } from './components/liste-course/liste-course.component';
 import { ReactiveFormModuleComponent } from './components/reactive-form-module/reactive-form-module.component';
 import { ExoFormComponent } from './components/exo-form/exo-form.component';
+import { TableUsersComponent } from './components/table-user/table-users.component';
+import { FormSearchComponent } from './components/form-search/form-search.component';
+import { ExoInputVendrediComponent } from './components/exo-input-vendredi/exo-input-vendredi.component';
+import { ButtonDeleteComponent } from './components/button-delete/button-delete.component';
 
 @Component({
   selector: 'app-root',
@@ -42,10 +46,28 @@ import { ExoFormComponent } from './components/exo-form/exo-form.component';
     ListeCourseComponent,
     ReactiveFormModuleComponent,
     ExoFormComponent,
+    TableUsersComponent,
+    FormSearchComponent,
+    ExoInputVendrediComponent,
+    ButtonDeleteComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
   title?: string;
+
+  hello: string = 'bonjour';
+
+  test: boolean = false;
+
+  changeValue(event: string) {
+    this.hello = 'changement';
+    console.log(this.test);
+    this.test = !this.test;
+  }
+
+  changeTest(event: boolean) {
+    this.test = !this.test;
+  }
 }

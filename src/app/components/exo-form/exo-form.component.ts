@@ -24,26 +24,32 @@ export class ExoFormComponent {
     },
   ];
 
-  user: FormGroup = this.formBuiler.group({
+  user: FormGroup = this.formBuilder.group({
     nom: ['', [Validators.required, Validators.minLength(2)]],
     prenom: ['', [Validators.required, Validators.minLength(2)]],
     email: ['', [Validators.required, Validators.email]],
     entreprise: ['', [Validators.required, Validators.minLength(5)]],
-    telephone: [
-      '',
-      [
-        Validators.required,
-        Validators.pattern(/^[0-9]+$/),
+    // telephone: [
+    //   '',
+    //   [
+    //     Validators.required,
+    //     Validators.pattern(/^[0-9]+$/),
+    //     Validators.minLength(10),
+    //   ],
+    // ],
+    telephone: this.formBuilder.array([
+      this.formBuilder.control('', [
         Validators.minLength(10),
-      ],
-    ],
+        Validators.required,
+      ]),
+    ]),
   });
 
   userData: any[] = [];
 
   submitted: boolean = false;
 
-  constructor(private formBuiler: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder) {}
 
   private addUser() {
     this.userData.push(this.user.value);
