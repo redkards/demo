@@ -1,6 +1,10 @@
 <p>exoform-usercard-parent works!</p>
+<app-exoform-usercard-enfant1 [user]="userData"></app-exoform-usercard-enfant1>
 
-@for (item of users; track $index) { }@empty {
+@for (item of users; track $index) {
+
+<p>{{ item.nom }}</p>
+}@empty {
 
 <p>Aucun utilisateur</p>
 
@@ -9,4 +13,3 @@
 <app-exoform-usercard-enfant2
   [newUser]="userData"
 ></app-exoform-usercard-enfant2>
-<app-exoform-usercard-enfant1></app-exoform-usercard-enfant1>
