@@ -21,8 +21,4 @@ export class ExoformUsercardParentComponent {
   users: UserForm[] = [];
 
   userData: UserForm = new UserForm();
-
-  // addUser(user: UserForm):{
-  //   this.user.push(user)
-  // }
 }

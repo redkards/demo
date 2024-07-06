@@ -25,6 +25,7 @@ import { ButtonDeleteComponent } from './components/button-delete/button-delete.
 import { ExoformUsercardParentComponent } from './components/exoform-usercard-parent/exoform-usercard-parent.component';
 import { ExoformUsercardEnfant1Component } from './components/exoform-usercard-enfant1/exoform-usercard-enfant1.component';
 import { ExoformUsercardEnfant2Component } from './components/exoform-usercard-enfant2/exoform-usercard-enfant2.component';
+import { InputVendrediParentComponent } from './components/input-vendredi-parent/input-vendredi-parent.component';
 
 @Component({
   selector: 'app-root',
@@ -56,27 +57,9 @@ import { ExoformUsercardEnfant2Component } from './components/exoform-usercard-e
     ExoformUsercardParentComponent,
     ExoformUsercardEnfant1Component,
     ExoformUsercardEnfant2Component,
+    InputVendrediParentComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title?: string;
-
-  hello: string = 'bonjour';
-
-  test: boolean = false;
-
-  // changeValue(event: string) {
-  //   this.hello = 'changement';
-  //   console.log(this.test);
-  // }
-
-  changeTest(clickEvent: boolean) {
-    if (clickEvent) {
-      this.hello = 'salut';
-    } else {
-      this.hello = 'bonjour';
-    }
-  }
-}
+export class AppComponent {}

@@ -1,13 +1,12 @@
 <p>exoform-usercard-parent works!</p>
-@for (item of users; track $index) {
 
-
-<app-exoform-usercard-enfant1 [user]="item"></app-exoform-usercard-enfant1>
-}@empty {
+@for (item of users; track $index) { }@empty {
 
 <p>Aucun utilisateur</p>
 
-
 }
 
-<app-exoform-usercard-enfant2 [newUser]="userData"></app-exoform-usercard-enfant2>
+<app-exoform-usercard-enfant2
+  [newUser]="userData"
+></app-exoform-usercard-enfant2>
+<app-exoform-usercard-enfant1></app-exoform-usercard-enfant1>

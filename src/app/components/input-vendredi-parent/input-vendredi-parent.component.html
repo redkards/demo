@@ -1,0 +1,19 @@
+<p>input-vendredi-parent works!</p>
+
+<app-exo-input-vendredi
+  [titre]="'hello'"
+  [buttonText]="'click'"
+  [bg]="'text-bg-primary p-3'"
+></app-exo-input-vendredi>
+<app-exo-input-vendredi
+  [titre]="hello"
+  [buttonText]="'appuyer'"
+  [bg]="'text-bg-success p-3'"
+></app-exo-input-vendredi>
+<app-exo-input-vendredi
+  [titre]="hello"
+  [buttonText]="'fermer'"
+  [bg]="'text-bg-warning p-3'"
+  [testEnfant]="test"
+  (changeTest)="changeTest($event)"
+></app-exo-input-vendredi>
