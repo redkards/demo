@@ -2,17 +2,21 @@
 
 <app-exo-input-vendredi
   [titre]="'hello'"
-  [buttonText]="'click'"
+  [buttonText]="textButton"
   [bg]="'text-bg-primary p-3'"
+  [testEnfant]="test"
+  (changeTest)="changeTest($event)"
 ></app-exo-input-vendredi>
 <app-exo-input-vendredi
   [titre]="hello"
-  [buttonText]="'appuyer'"
+  [buttonText]="textButton1"
   [bg]="'text-bg-success p-3'"
+  [testEnfant]="test"
+  (changeTest)="changeTest($event)"
 ></app-exo-input-vendredi>
 <app-exo-input-vendredi
-  [titre]="hello"
-  [buttonText]="'fermer'"
+  [titre]="hello2"
+  [buttonText]="textButton2"
   [bg]="'text-bg-warning p-3'"
   [testEnfant]="test"
   (changeTest)="changeTest($event)"
